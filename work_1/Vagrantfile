@@ -1,4 +1,10 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
 Vagrant.configure("2") do |config|
   config.vm.box = "chelenjer27/centos"
   config.vm.box_version = "7.7"
+  script_path = './scripts'
+  config.vm.provision "shell" do |script|
+  script.path = "#{script_path}/config.sh"
+  end
 end

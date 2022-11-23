@@ -1,4 +1,7 @@
-manual_kernel_update/packer/builds/*
-manual_kernel_update/test_box/*
 *.box
 .*
+HDD/
+manual_kernel_update/
+otus-linux/
+*.vdi
+vdisk/
