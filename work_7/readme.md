@@ -28,3 +28,35 @@ touch /.autorelabel
 для загрузки в систему
 В целом то же самое что и в прошлом примере, но файловая система сразу
 смонтирована в режим Read-Write
+# Установить систему с LVM, после чего переименовать VG
+Текущее состояние системы:
+vgs
+VG #PV #LV #SN Attr VSize VFree
+VolGroup00 1 2 0 wz--n- <38.97g
+Приступим к переименованию:
+sudo vgrename VolGroup00 OtusRoot
+правим /etc/fstab, /etc/default/grub, /boot/grub2/grub.cfg. Везде заменяем старое
+название на новое.
+Пересоздаем initrd image, чтобы он знал новое название Volume Group
+sudo mkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname -r)
+После чего можем перезагружаться и если все сделано правильно успешно грузимся с
+новым именем Volume Group и проверяем:
+sudo vgs
+Скрипты модулей хранятся в каталоге /usr/lib/dracut/modules.d/. Для того чтобы
+добавить свой модуль создаем там папку с именем 01test:
+sudo mkdir /usr/lib/dracut/modules.d/01test
+В нее поместим два скрипта:
+1.module-setup.sh - который устанавливает модуль и вызывает скрипт test.sh
+2.test.sh - собственно сам вызываемый скрипт, в нём у нас рисуется пингвинчик
+Пересобираем образ initrd
+mkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname -r)
+или
+dracut -f -v
+Можно проверить/посмотреть какие модули загружены в образ:
+lsinitrd -m /boot/initramfs-$(uname -r).img | grep test
+После чего можно пойти двумя путями для проверки:
+○Перезагрузиться и руками выключить опции rghb и quiet и увидеть вывод
+○Либо отредактировать grub.cfg убрав эти опции
+В итоге при загрузке будет пауза на 10 секунд и вы увидите пингвина в выводе
+терминала
+![ScreenshotMenu](https://github.com/chelenjer27/project/tree/main/work_7/screen/Pingvin.png)
