@@ -17,7 +17,7 @@
 # Подключаемся к виртуальной машине
     4. vagrant ssh
 # Запустить скрипт
-    5. sudo bash ./home/vagrant/rpm_script.sh
-# Проверяeм опубликованный репозиторий на NGINX
-    6. lynx http://localhost/repo/
+    5. sudo -i bash rpm_script.sh
+# Проверяeм опубликованный репозиторий
+    6. yum list | grep otus
  
