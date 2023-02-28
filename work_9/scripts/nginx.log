@@ -1,0 +1,58 @@
+
+Di 28. Feb 16:04:21 CET 2023Top 10 Request IP's:
+====================
+22 62.75.198.172
+21 148.251.223.21
+20 93.158.167.130
+16 185.6.8.9
+14 87.250.233.68
+13 109.236.252.130
+12 212.57.117.19
+10 188.43.241.106
+9 95.108.181.93
+6 167.99.14.153
+
+Di 28. Feb 16:04:21 CET 2023 Top Request Methods:
+====================
+249 GET
+140 POST
+
+Di 28. Feb 16:04:21 CET 2023 Top 10 Request Pages:
+=====================
+116 /wp-login.php
+74 /
+57 /xmlrpc.php
+4 /wp-admin/admin-post.php?page=301bulkoptions
+4 /author/admin/
+3 /wp-content/uploads/2016/10/WebHostingSolution.jpg
+3 /wp-content/uploads/2016/10/robo5.jpg
+3 /wp-content/uploads/2016/10/robo4.jpg
+3 /wp-content/uploads/2016/10/robo3.jpg
+3 /wp-content/uploads/2016/10/robo2.jpg
+
+Di 28. Feb 16:04:21 CET 2023 Top 10 Request Pages from All Logs:
+===================================
+116 /wp-login.php
+74 /
+57 /xmlrpc.php
+4 /wp-admin/admin-post.php?page=301bulkoptions
+4 /author/admin/
+3 /wp-content/uploads/2016/10/WebHostingSolution.jpg
+3 /wp-content/uploads/2016/10/robo5.jpg
+3 /wp-content/uploads/2016/10/robo4.jpg
+3 /wp-content/uploads/2016/10/robo3.jpg
+3 /wp-content/uploads/2016/10/robo2.jpg
+
+Di 28. Feb 16:04:21 CET 2023 Top 10: 404 Page Responses:
+===========================
+31 /
+5 /robots.txt
+5 /1
+2 /.well-known/security.txt
+2 /sitemap.xml
+2 /admin/config.php
+1 /wp-content/plugins/uploadify/readme.txt
+1 /webdav/
+1 /manager/html
+1 /favicon.ico
+
